@@ -1,0 +1,55 @@
+.home {
+  position: relative;
+  height: 100vh;
+  background-image: url("/public/inicio.png");
+  background-size: cover;
+  background-position: center;
+
+  /* Centrar el contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+  color: white; /* Cambia el color del texto para que resalte */
+  text-align: center;
+  padding: 20px;
+  opacity: 0; /* Inicialmente oculto */
+  transform: translateY(20px); /* Comienza ligeramente desplazado hacia abajo */
+  animation: fadeInUp 2s ease-in-out forwards; /* Aplica la animación */
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(7, 7, 7, 0.1);
+  z-index: 0; /* Asegura que el overlay esté por debajo del contenido */
+}
+
+/* Definición de la animación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Comienza ligeramente abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición final */
+  }
+}
+.phome {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.h1home {
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,49 @@
+.logo {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.logo-icon {
+  height: 93px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.encabezado {
+  background-color: rgb(68, 64, 64); /* Fondo negro más oscuro */
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.enlace {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(250, 250, 250);
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+}
+
+.enlace:hover {
+  background-color: rgba(68, 173, 180, 0.63);
+  color: rgb(29, 27, 27);
+}
+
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .enlace {
+    width: 100%;
+    text-align: left;
+  }
+}

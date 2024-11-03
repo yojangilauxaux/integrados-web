@@ -1,0 +1,103 @@
+.services {
+  position: relative;
+  padding: 35px;
+  background-image: url("/public/services.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.text-background {
+  background-color: rgba(197, 186, 186, 0.459);
+  padding: 20px; /* Espacio interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  margin: 0 auto; /* Centra el contenedor */
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  text-align: center; /* Centra el texto */
+  margin-bottom: 0px;
+
+  /* Animación para la aparición del texto */
+  opacity: 0;
+  transform: translateY(20px); /* Inicia desplazada hacia abajo */
+  animation: fadeInUp 0.8s forwards; /* Aplica la animación */
+}
+
+/* Animación fadeInUp */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.service-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(58, 152, 165, 0.3);
+  padding: 10px;
+  max-width: 280px;
+  flex: 1 1 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+  /* Agrega animación */
+  opacity: 0;
+  transform: translateY(20px); /* Inicia desplazada hacia abajo */
+  animation: fadeInUp 0.8s forwards;
+}
+
+.service-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.service-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.service-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.service-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px; /* Ajusta el margen inferior */
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
