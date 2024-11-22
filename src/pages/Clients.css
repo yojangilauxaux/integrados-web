@@ -1,0 +1,136 @@
+
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("/public/inicio.png ");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative; 
+  color: white; 
+}
+
+
+.clients::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17,17,17,0.096);
+  z-index: 0; 
+}
+
+
+.clients-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.clients-header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.clients-header p {
+  font-size: 1.2rem;
+  color: #bdc3c7;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+
+.clients-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1; 
+}
+
+
+.client-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.client-card:hover img {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+
+.client-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.client-card:hover:before {
+  opacity: 0.3;
+}
+
+
+@media (max-width: 768px) {
+  .clients-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .clients-header p {
+    font-size: 1rem;
+  }
+
+  .clients-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-container {
+    grid-template-columns: 1fr;
+  }
+}

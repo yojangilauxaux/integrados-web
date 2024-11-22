@@ -1,29 +1,47 @@
+import React from "react";
 import Header from "../components/Header";
-import './Galery.css';
+import "./galery.css";
 
 const Galery = () => {
+    const images = [
+        "/public/card3.png",
+        "/public/galery1.png",
+        "/public/galery6.png",
+        "/public/galery3.png",
+        "/public/galery4.png",
+        "/public/galery5.png",
+        "/public/galery3.png",
+        "/public/galery7.png",
+        "/public/galery8.png",
+        "/public/galery9.png",
+        "/public/galery10.png",
+        "/public/galery11.png",
+        "/public/galery12.png",
+        "/public/galery13.png",
+        "/public/galery14.png",
+
+    ];
+
     return (
         <div>
             <Header />
-            <section className="gallery">
-                <h1>Galería de Imágenes</h1>
-                <div className="gallery-content">
-                    <img src="public/img1.jpg" alt="Descripción 1" />
-                    <img src="public/img2.jpg" alt="Descripción 2" />
-                    <img src="public/img3.jpg" alt="Descripción 3" />
-                    <img src="/public/.jpg" alt="Descripción 4" />
-                    <img src="/public/.jpg" alt="Descripción 5" />
-                    <img src="/public/.jpg" alt="Descripción 6" />
-                    <img src="/public/.jpg" alt="Descripción 7" />
-                    <img src="/public/.jpg" alt="Descripción 8" />
-                    <img src="/public/.jpg" alt="Descripción 8" />
-                    <img src="/public/.jpg" alt="Descripción 8" />
-                    <img src="/public/.jpg" alt="Descripción 8" />
+            <section className="galery">
+                <div className="galery-header">
+                    <h1>Nuestra Galería</h1>
+                    <p>
+                        Explora nuestras imágenes destacadas y conoce más sobre nosotros.
+                    </p>
                 </div>
-
+                <div className="galery-container">
+                    {images.map((src, index) => (
+                        <div className="card" key={index}>
+                            <img src={src} alt={`Image ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
             </section>
         </div>
     );
-}
+};
 
 export default Galery;

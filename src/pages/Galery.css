@@ -1,67 +1,138 @@
-.gallery {
-  position: relative;
-  padding: 40px 30px;
-  background-image: url("/public/inicio.png"); /* Cambia por tu imagen de fondo */
-  background-size: cover; /* Asegúrate de que la imagen cubra todo el fondo */
-  background-position: center; /* Centra la imagen de fondo */
-  color: white;
-  text-align: center;
-  min-height: 100vh; /* Asegura que la sección ocupe al menos la altura de la ventana */
+
+.galery {
+  padding: 3rem 2rem;
+  background-image: url("/public/about.png"); 
+  background-size: cover;
+  background-position: center;
+  color: white; 
+  position: relative; 
+  text-align: center; 
 }
 
-.gallery h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto para mejor legibilidad */
+
+.galery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51,49,49, 0.144 );
+  z-index: 0; 
 }
 
-.gallery-content {
+
+.galery-header {
+  margin-bottom: 2rem;
+  position: relative; 
+  z-index: 1; 
+}
+
+.galery-header h1 {
+  font-size: 2.5rem;
+  color: #fff; 
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.galery-header p {
+  font-size: 1.1rem;
+  color: #d3d3d3;
+}
+
+
+.galery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive */
-  gap: 15px; /* Espacio entre las imágenes */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1; 
 }
 
-.gallery-content img {
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
   width: 100%;
-  height: auto; /* Mantiene la proporción de las imágenes */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
-  opacity: 0; /* Comienza invisible */
-  transform: translateY(20px); /* Desplaza la imagen hacia abajo */
-  animation: fadeInUp 0.5s forwards; /* Aplica la animación */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Animación para las imágenes */
-@keyframes fadeInUp {
-  to {
-    opacity: 1; /* Al final de la animación, la imagen es completamente visible */
-    transform: translateY(0); /* Regresa a su posición original */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Efecto de sombra al pasar el ratón */
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover:before {
+  opacity: 1;
+}
+
+
+.card h3 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .galery-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .galery-header p {
+    font-size: 1rem;
+  }
+
+  .galery-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Aplicar un retraso a las imágenes */
-.gallery-content img:nth-child(1) {
-  animation-delay: 0.1s; /* Retraso para la primera imagen */
-}
-.gallery-content img:nth-child(2) {
-  animation-delay: 0.2s; /* Retraso para la segunda imagen */
-}
-.gallery-content img:nth-child(3) {
-  animation-delay: 0.3s; /* Retraso para la tercera imagen */
-}
-.gallery-content img:nth-child(4) {
-  animation-delay: 0.4s; /* Retraso para la cuarta imagen */
-}
-.gallery-content img:nth-child(5) {
-  animation-delay: 0.5s; /* Retraso para la quinta imagen */
-}
-.gallery-content img:nth-child(6) {
-  animation-delay: 0.6s; /* Retraso para la sexta imagen */
-}
-.gallery-content img:nth-child(7) {
-  animation-delay: 0.7s; /* Retraso para la séptima imagen */
-}
-.gallery-content img:nth-child(8) {
-  animation-delay: 0.8s; /* Retraso para la octava imagen */
+@media (max-width: 480px) {
+  .galery-container {
+    grid-template-columns: 1fr;
+  }
 }

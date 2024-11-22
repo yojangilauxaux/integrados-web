@@ -3,7 +3,6 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,4 +31,13 @@ body {
   background-color: rgba(0, 0, 0, 0.9); /* Fondo negro más oscuro */
   position: relative;
   top: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+html {
+  overflow-y: scroll;
 }

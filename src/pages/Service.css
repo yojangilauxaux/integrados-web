@@ -1,25 +1,41 @@
+
 .services {
   position: relative;
   padding: 35px;
-  background-image: url("/public/services.png");
+  background-image: url("/public/services.png"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
   min-height: 100vh;
+  position: relative; 
 }
+
+
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(43, 42, 42, 0.171); 
+  z-index: 0; /* Asegura que el overlay esté por debajo del contenido */
+}
+
 
 .text-background {
   background-color: rgba(197, 186, 186, 0.459);
-  padding: 20px; /* Espacio interno */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
-  margin: 0 auto; /* Centra el contenedor */
-  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
-  text-align: center; /* Centra el texto */
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  margin: 0 auto; 
+  max-width: 800px; 
+  text-align: center; 
   margin-bottom: 0px;
+  position: relative;
+  z-index: 1; 
 
   /* Animación para la aparición del texto */
   opacity: 0;
@@ -44,6 +60,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
+  position: relative;
+  z-index: 1; /* Asegura que las tarjetas estén por encima del overlay */
 }
 
 .service-item {
@@ -96,8 +114,7 @@ p {
 }
 
 h2 {
-  margin-bottom: 20px; /* Ajusta el margen inferior */
-  font-size: 25px;
+  margin-bottom: 20px; 
   font-family: Arial, Helvetica, sans-serif;
   color: black;
 }

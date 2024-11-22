@@ -12,12 +12,17 @@
 .about-content {
   max-width: 1100px;
   text-align: center;
-  margin-bottom: 20px; /* Espacio inferior */
+  margin-bottom: 20px;
   opacity: 0; /* Comienza invisible */
   transform: translateY(20px); /* Comienza desplazado hacia abajo */
   animation: fadeInUp 0.8s forwards; /* Aplica la animación */
   animation-delay: 0.2s; /* Retraso antes de que comience la animación */
-  background-color: rgba(197,186,186,0.459); /* Fondo semitransparente para mejorar la legibilidad */
+  background-color: rgba(
+    197,
+    186,
+    186,
+    0.459
+  ); /* Fondo semitransparente para mejorar la legibilidad */
   padding: 50px;
   border-radius: 8px;
 }
