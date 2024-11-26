@@ -1,19 +1,17 @@
-
 .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3rem 1rem;
-  background-image: url("/public/img1.png"); 
+  background-image: url("/public/img1.png");
   background-size: cover;
   background-position: center;
-  color: white; 
+  color: white;
   min-height: 100vh;
   text-align: center;
-  position: relative;/
+  position: relative;
 }
-
 
 .contact::before {
   content: "";
@@ -22,31 +20,29 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.137); 
+  background-color: rgba(0, 0, 0, 0.137);
   z-index: 0;
 }
 
-
 .contact-header {
   margin-bottom: 3rem;
-  position: relative; 
+  position: relative;
   z-index: 1;
 }
 
 .contact-header h1 {
   font-size: 3rem;
-  color: #fff; 
+  color: #fff;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .contact-header p {
   font-size: 1.25rem;
-  color: #d3d3d3; 
+  color: #d3d3d3;
   line-height: 1.6;
   font-weight: 300;
 }
-
 
 .contact-icons {
   display: flex;
@@ -54,9 +50,8 @@
   align-items: center;
   gap: 2rem;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
-
 
 .contact-icon {
   display: inline-block;
@@ -76,7 +71,6 @@
 .contact-icon:hover img {
   opacity: 0.8;
 }
-
 
 @media (max-width: 768px) {
   .contact-header h1 {

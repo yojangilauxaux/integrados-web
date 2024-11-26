@@ -1,47 +1,52 @@
-import Home from '../pages/Home'
-import ErrorNotFound from '../pages/ErrorNotFound'
-import About from '../pages/About'
+// src/routes/routerApp.js
+
+import Login from '../pages/auth/Login';
+import Register from '../pages/auth/Register';
+import Home from '../pages/Home';
+import ErrorNotFound from '../pages/ErrorNotFound';
+import About from '../pages/About';
 import ChooseUs from '../pages/ChooseUs';
-import Clients from '../pages/Clients'
-import Contact from '../pages/Contact'
-import Galery from '../pages/Galery'
-import Services from '../pages/Services'
-
-
-
-
-
+import Clients from '../pages/Clients';
+import Contact from '../pages/Contact';
+import Galery from '../pages/Galery';
+import Services from '../pages/Services';
 
 export let routes = [
     {
-        path: '/',
+        path: '/login',  // Ruta absoluta
+        element: <Login />,
+    },
+    {
+        path: '/register',  // Ruta absoluta
+        element: <Register />,
+    },
+    {
+        path: '/',  // Ruta principal
         element: <Home />,
-        errorElement: <ErrorNotFound />
+        errorElement: <ErrorNotFound />,
     },
     {
         path: '/about',
-        element: <About />
+        element: <About />,
     },
     {
         path: '/services',
-        element: <Services />
+        element: <Services />,
     },
     {
         path: '/choose-us',
-        element: <ChooseUs />
+        element: <ChooseUs />,
     },
     {
         path: '/galery',
-        element: <Galery />
-
+        element: <Galery />,
     },
     {
-
         path: '/clients',
-        element: <Clients />
-
+        element: <Clients />,
     },
     {
         path: '/contact',
-        element: <Contact />
-    }]
+        element: <Contact />,
+    },
+];
