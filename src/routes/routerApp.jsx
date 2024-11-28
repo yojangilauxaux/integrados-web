@@ -1,7 +1,5 @@
-// src/routes/routerApp.js
-
-import Login from '../pages/auth/Login';
-import Register from '../pages/auth/Register';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 import Home from '../pages/Home';
 import ErrorNotFound from '../pages/ErrorNotFound';
 import About from '../pages/About';
@@ -10,18 +8,23 @@ import Clients from '../pages/Clients';
 import Contact from '../pages/Contact';
 import Galery from '../pages/Galery';
 import Services from '../pages/Services';
+import { Navigate } from 'react-router-dom'; 
 
 export let routes = [
     {
-        path: '/login',  // Ruta absoluta
+        path: '/', 
+        element: <Navigate to="/login" replace />, 
+    },
+    {
+        path: '/login',  
         element: <Login />,
     },
     {
-        path: '/register',  // Ruta absoluta
+        path: '/register',
         element: <Register />,
     },
     {
-        path: '/',  // Ruta principal
+        path: '/home',
         element: <Home />,
         errorElement: <ErrorNotFound />,
     },

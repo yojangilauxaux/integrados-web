@@ -1,32 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 import Swal from 'sweetalert2';
+import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    // Verificamos si el usuario está logueado
+
     useEffect(() => {
-        console.log("Checking authentication status...");
         if (auth.currentUser) {
-            console.log("User is already authenticated");
-            navigate('/'); 
+            console.log("Usuario ya está autenticado");
+            navigate('/home');
         }
     }, [navigate]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        setLoading(true);
+
         try {
             await signInWithEmailAndPassword(auth, email, password);
             Swal.fire('Login exitoso', 'Bienvenido al sitio', 'success');
-            navigate('/');  // Redirige al Home después de un login exitoso
+            navigate('/home');
         } catch (error) {
-            console.error("Login failed:", error.message); // Log de error
+            console.error("Error en el login:", error.code, error.message);
             Swal.fire('Error', error.message, 'error');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -39,14 +44,21 @@ const Login = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Correo electrónico"
+                    required
                 />
                 <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Contraseña"
+                    required
                 />
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Cargando...' : 'Iniciar sesión'}
+                </button>
+                <p>
+                    ¿No tienes cuenta? <a href="/register">Regístrate</a>
+                </p>
             </form>
         </div>
     );

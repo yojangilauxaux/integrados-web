@@ -1,6 +1,7 @@
 // Importa las funciones necesarias del SDK
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth"; // Importa la función de autenticación de Firebase
 
 // Configuración de Firebase
 const firebaseConfig = {
@@ -17,5 +18,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+// Inicializa Firebase Authentication
+const auth = getAuth(app); // Se inicializa el servicio de autenticación
+
 // Exporta Firebase y sus servicios inicializados
-export { app, analytics };
+export { app, analytics, auth }; // Asegúrate de exportar 'auth'
