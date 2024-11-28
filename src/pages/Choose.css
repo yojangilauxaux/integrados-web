@@ -4,72 +4,96 @@
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("/public/inicio.png ");
+  background-image: url("/public/galery11.png");
   background-size: cover;
   background-position: center;
+  color: #161414fa;
   text-align: center;
   padding: 3rem 1rem;
   position: relative;
-  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.choose-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.986);
+  z-index: -1;
 }
 
 .text-background {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(197, 186, 186, 0.459);
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: #0c0c0cf6;
 }
 
 .intro-text {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  line-height: 1.6;
+  color: rgb(255, 255, 255);
 }
 
-.reasons-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
+.reasons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.reasons-list li {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #f0f0f0;
+.reason-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.reasons-list strong {
-  font-size: 1.1rem;
-  color: #ffdd57;
+.reason-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.212);
 }
 
-.reasons-list li:hover {
-  transform: translateX(10px);
-  transition: 0.3s ease;
-  color: #fff;
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
+.reason-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: rgba(5, 5, 5, 0.959);
+}
+
+.reason-description {
+  font-size: 18px;
+  color: #222020;
+}
 
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;
   }
 
-  .intro-text {
-    font-size: 1rem;
-  }
-
-  .reasons-list li {
-    font-size: 0.9rem;
+  .reason-card {
+    max-width: 100%;
   }
 }

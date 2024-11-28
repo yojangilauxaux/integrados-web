@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   padding: 3rem 1rem;
-  background-image: url("/public/img1.png");
+  background-image: url("/public/about.png");
   background-size: cover;
   background-position: center;
-  color: white;
+  color: rgb(247, 247, 247);
   min-height: 100vh;
   text-align: center;
   position: relative;
@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.137);
+  background-color: rgba(19, 18, 18, 0.137);
   z-index: 0;
 }
 
@@ -38,10 +38,10 @@
 }
 
 .contact-header p {
-  font-size: 1.25rem;
-  color: #d3d3d3;
+  font-size: 20px;
+  color: #fff;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .contact-icons {

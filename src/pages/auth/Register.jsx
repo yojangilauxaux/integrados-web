@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Register.css';  
 import Swal from 'sweetalert2'; 
 import { createUserWithEmailAndPassword } from 'firebase/auth'; 
-import { auth } from '../../firebaseConfig';  
+
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

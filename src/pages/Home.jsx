@@ -14,13 +14,13 @@ const Home = () => {
 
                 {/* Sección para los íconos */}
                 <div className="social-icons">
-                    <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <a href="https://www.instagram.com/otvaletparkingmed?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="social-icon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
                     </a>
-                    <a href="https://wa.me/tu_numero" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <a href="https://wa.me/3163290917" target="_blank" rel="noopener noreferrer" className="social-icon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
                     </a>
-                    <a href="https://www.facebook.com/empresa" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <a href="https://www.facebook.com/otvaletparking/" target="_blank" rel="noopener noreferrer" className="social-icon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
                     </a>
                 </div>

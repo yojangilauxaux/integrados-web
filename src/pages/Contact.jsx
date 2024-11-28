@@ -12,14 +12,14 @@ const Contact = () => {
                     <p>Estamos aquí para ayudarte. Conéctate con nosotros a través de cualquiera de nuestros canales.</p>
                 </div>
                 <div className="contact-icons">
-                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="contact-icon">
+                    <a href="https://wa.me/3163290917" target="_blank" rel="noopener noreferrer" className="contact-icon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
                     </a>
 
-                    <a href="https://www.facebook.com/empresa" target="_blank" rel="noopener noreferrer" className="contact-icon">
+                    <a href="https://www.facebook.com/otvaletparking/" rel="noopener noreferrer" className="contact-icon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
                     </a>
-                    <a href="https://www.instagram.com/empresa" target="_blank" rel="noopener noreferrer" className="contact-icon">
+                    <a href="https://www.instagram.com/otvaletparkingmed?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="contact-icon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
                     </a>
                 </div>

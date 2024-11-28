@@ -4,14 +4,14 @@ import "./Clients.css";
 
 const Clients = () => {
     const clientLogos = [
-        { src: "https://via.placeholder.com/300x150?text=Client+1", alt: "Client 1" },
-        { src: "https://via.placeholder.com/300x150?text=Client+2", alt: "Client 2" },
-        { src: "https://via.placeholder.com/300x150?text=Client+3", alt: "Client 3" },
-        { src: "https://via.placeholder.com/300x150?text=Client+4", alt: "Client 4" },
-        { src: "https://via.placeholder.com/300x150?text=Client+5", alt: "Client 5" },
-        { src: "https://via.placeholder.com/300x150?text=Client+6", alt: "Client 6" },
-        { src: "https://via.placeholder.com/300x150?text=Client+6", alt: "Client 6" },
-        { src: "https://via.placeholder.com/300x150?text=Client+6", alt: "Client 6" },
+        { src: "/public/logo myb.png", alt: "Client 1" },
+        { src: "/public/logoPark.png", alt: "Client 2" },
+        { src: "/public/logoZona.png", alt: "Client 3" },
+        { src: "/public/logoSombra.png", alt: "Client 4" },
+        { src: "/public/logoAros.png", alt: "Client 5" },
+        { src: "/public/logoCuento.png", alt: "Client 6" },
+        { src: "/public/logoGroup.png", alt: "Client 6" },
+        { src: "/public/logoAzul.png", alt: "Client 6" },
 
     ];
 
