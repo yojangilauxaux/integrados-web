@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import "./Choose.css";
+import React from 'react'; 
 
 const ChooseUs = () => {
     const reasons = [
